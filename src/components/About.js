@@ -1,17 +1,15 @@
 import React from 'react'
 
-
 const About = (props) => {
-  const { imageSrc, aboutText } = props
-  const defaultImage = 'https://via.placeholder.com/215'
-  const imageAlt = 'blog logo'
   return (
-    <aside>
-      {/* <img src={imageSrc || 'logo.svg'} alt={imageAlt} /> */}
-
-      {/* <img src={imageSrc || defaultImage} alt={imageAlt} /> */}
-      <p>{aboutText}</p>
-    </aside>
+    <div>
+      {props.image ? (
+        <img src={props.image} alt='blog logo' />
+      ) : (
+        <img src='https://via.placeholder.com/215' alt='blog logo' />
+      )}
+      <p>{props.about}</p>
+    </div>
   )
 }
 
