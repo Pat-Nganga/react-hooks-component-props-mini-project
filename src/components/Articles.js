@@ -1,12 +1,12 @@
 import React from 'react'
 
-function Articles({ title, date, preview }) {
+function Articles({ title, date ="January 1, 1970", preview }) {
   return (
-    <div>
+    <article>
       <h3>{title}</h3>
       <small>{date}</small>
       <p>{preview}</p>
-    </div>
+    </article>
   )
 }
 export default Articles
